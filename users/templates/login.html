@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>로그인</title>
+  </head>
+  <body>
+    <h1>로그인</h1>
+    <form method="post">
+      {% csrf_token %}
+      <label for="username">사용자명:</label><br />
+      <input type="text" id="username" name="username" /><br />
+      <label for="password">비밀번호:</label><br />
+      <input type="password" id="password" name="password" /><br />
+      <button type="submit">로그인</button>
+    </form>
+    <a href="{% url 'register' %}">회원가입</a>
+  </body>
+</html>
